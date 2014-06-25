@@ -1,0 +1,251 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eee;
+}
+
+h1 {
+    color: #0493bd;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a:hover, a:visited {
+    color: #0493bd;
+}
+
+div.wrapper {
+    background-color: white;
+    border-left: 1px dashed #333;
+    border-right: 1px dashed #333;
+    margin: 0 auto;
+    width:60%;
+}
+
+/* Main menue */
+.ct-header {
+    background: #0493bd;
+    position: relative;
+    padding: 30px 0;
+}
+
+.ct-nav-wrapper {
+    margin: -8px 0;
+}
+
+.ct-nav-main {
+    float: left;
+    clear: both;
+    text-transform: uppercase;
+}
+
+.ct-nav-main ul li {
+    display: inline;
+    color: white;
+}
+
+.ct-nav-main ul li:after {
+    content: " . ";
+    font-size: 2em;
+}
+
+.ct-nav-main ul li a {
+    white-space: nowrap;
+    text-decoration: none;
+    color:white;
+}
+
+.ct-nav-main ul li a:hover {
+    color:cornsilk;
+}
+
+/* Top right menue  */
+.ct-header-items-right {
+    float: right;
+    margin: 14px 0;
+}
+
+.ct-inner {
+    padding: 0px 20px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.ct-options li {
+    float: left;
+}
+
+.ct-options li a {
+    margin: 0 6px;
+    color: white;
+    text-decoration:none;
+}
+
+.ct-options li a:hover {
+    color: cornsilk;
+}
+
+div.content {
+    min-height:86%;
+}
+
+div.block {
+    border: 1px dashed #333;
+    width: 50%;
+    padding:10px;
+    margin: 4px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+}
+
+div.paginator {
+    font-size: 0.8em;
+    margin: 6px auto;
+}
+
+/* Footer */
+footer.nav {
+    text-align: center;
+    margin: 0 auto;
+}
+
+footer.nav a, footer.nav a:visited {
+    color:#336699;
+    text-decoration:none;
+}
+
+footer.nav a:hover {
+    color: #0493bd;
+}
+
+
+/* Forms */
+label {
+    color:#999;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1em;
+}
+
+.custom-input {
+    color:#3c3c3c;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight:500;
+    font-size: 1em;
+    border-radius: 0;
+    line-height: 1.2em;
+    background-color: #fbfbfb;
+    padding: 1em;
+    margin-bottom: 10px;
+    width:100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 3px solid rgba(0,0,0,0);
+}
+
+.custom-input:focus{
+    background: #fff;
+    box-shadow: 0;
+    border: 3px solid #3498db;
+    color: #3498db;
+    outline: none;
+    padding: 1em;
+}
+
+.focused, input:focus, select:focus{
+    color:#30aed6;
+    border:#30aed6 solid 3px;
+    outline: 0;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    line-height: 150%;
+    resize:vertical;
+}
+
+input:hover, textarea:hover,
+input:focus, textarea:focus
+select:focus, select:hover {
+    background-color:white;
+}
+
+.button-blue{
+    font-family: Arial, Helvetica, sans-serif;
+    float:left;
+    width: 100%;
+    border: #fbfbfb solid 4px;
+    cursor:pointer;
+    background-color: #3498db;
+    color:white;
+    font-size:24px;
+    padding-top:22px;
+    padding-bottom:22px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+}
+
+.button-blue:hover{
+    background-color: rgba(0,0,0,0);
+    color: #0493bd;
+}
+
+.submit:hover {
+    color: #3498db;
+}
+
+.ease {
+    width: 0px;
+    height: 74px;
+    background-color: #fbfbfb;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -o-transition: .3s ease;
+    -ms-transition: .3s ease;
+    transition: .3s ease;
+}
+
+.submit:hover .ease{
+    width:100%;
+    background-color:white;
+}
+
+.form-block {
+    background-color: #eee;
+}
+
+select {
+    color:#aaa;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight:500;
+    font-size: 1em;
+    border-radius: 0;
+    line-height: 1.2em;
+    padding: 1em;
+    margin-bottom: 10px;
+    width:100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 3px solid rgba(0,0,0,0);
+    -webkit-appearance: none;
+    background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50px' height='50px'><polyline points='46.139,15.518 25.166,36.49 4.193,15.519'/></svg>") right no-repeat;
+    background-color: #fbfbfb;
+    background-position: right 15px top 22px;
+    background-size: 18px 18px;
+}

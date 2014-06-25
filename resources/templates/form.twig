@@ -1,0 +1,24 @@
+<div class="block form-block">
+    <form action="/" method="post" class="form" id="form1">
+
+        <select id="select">
+            <option value="">Choose option</option>
+            <option value="1">select option 1</option>
+            <option value="2">select option 2</option>
+            <option value="3">select option 3</option>
+        </select>
+
+        {% from 'forms.twig' import input as input_field %}
+        {{ input_field("name", "", "text", "Name") }}
+        {{ input_field("email", "", "text", "Email") }}
+
+        <textarea name="text" class="custom-input" id="comment" placeholder="Comment"></textarea>
+
+        <div class="submit">
+            <input type="submit" value="SUBMIT" class="button-blue"/>
+            <div class="ease"></div>
+        </div>
+
+    </form>
+</div>
+

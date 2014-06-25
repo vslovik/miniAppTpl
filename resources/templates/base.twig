@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% block head %}
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="http://project.dev/resources/css/main.css" />
+        <title>App</title>
+    {% endblock %}
+</head>
+<body>
+
+<div class="wrapper">
+    {% include "header.twig" %}
+
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    {% include "footer.twig" %}
+</div>
+
+<!--script src="../resourses/js/jquery-1.7.1.min.js"></script-->
+<!--script src="../resources/js/main.js"></script-->
+</body>
+</html>

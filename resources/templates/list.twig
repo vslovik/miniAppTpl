@@ -1,0 +1,17 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <div class="block">
+        <h1>Our subscribers</h1>
+        <ul>
+        {% for user in users %}
+            <li>{{ user.name }} {{ user.email }}</li>
+        {% endfor %}
+        </ul>
+        {% include "paginator.twig" %}
+    </div>
+
+    {% include "form.twig" %}
+
+{% endblock %}
+
