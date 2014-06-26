@@ -1,25 +1,37 @@
-var rootURL = "http://localhost/cellar/api/wines";
-
-$('#btnSave').click(function() {
-    add();
-    return false;
+$(document).ready(function() {
+    $("#submit").click(function (e) {
+        e.preventDefault();
+        var txt = $('#text').val();
+        if( txt == '') {
+            $('#status').html('Error! Type your message!')
+                .removeClass('success')
+                .addClass('error');
+        } else {
+            add();
+        }
+    });
 });
 
 function add() {
     $.ajax({
         type: 'POST',
         contentType: 'application/json',
-        url: rootURL,
-        dataType: "json",
-        data: JSON.stringify({
-                "name": $('#name').val()
-            }),
+        url: '/ajaxpost',
+        data: {
+                "text": $('#text').val()
+            },
         success: function(data){
-            $('#btnDelete').show();
-            $('#wineId').val(data.id);
+            console.log(data);
+            $("#text").val("");
+            $('#status').html('Your post is published! <a href="/">See it.</a>')
+                .removeClass('error')
+                .addClass('success');
+
         },
         error: function(jqXHR, textStatus){
-            alert('addWine error: ' + textStatus);
+            $('#status').html('Error!')
+                .removeClass('success')
+                .addClass('error');
         }
     });
 }

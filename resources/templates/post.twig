@@ -1,0 +1,15 @@
+{% extends "base.twig" %}
+
+{% block content %}
+<div class="block form-block">
+    <div class="status" id="status">{{ msg }}</div>
+    <form action="/post" method="post" class="form" id="form1">
+        <textarea name="text" class="custom-input" id="text" placeholder="Write here"></textarea>
+        <div class="submit">
+            <input type="submit" value="POST" class="button-blue" id="submit"/>
+            <div class="ease"></div>
+        </div>
+    </form>
+</div>
+{% endblock %}
+

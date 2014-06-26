@@ -1,0 +1,17 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <div class="block form-block">
+        <div class="status error">{{ msg }}</div>
+        <form action="/login" method="post" class="form" id="form1">
+            {% from 'forms.twig' import input as input_field %}
+            {{ input_field("username", "", "text", "Username") }}
+            {{ input_field("password", "", "password", "Password") }}
+            <div class="submit">
+                <input type="submit" value="LOGIN" class="button-blue"/>
+                <div class="ease"></div>
+            </div>
+        </form>
+    </div>
+{% endblock %}
+

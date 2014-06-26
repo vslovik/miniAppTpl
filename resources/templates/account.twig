@@ -1,0 +1,32 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+    <div class="block form-block">
+        <div class="status {{status}}">{{ msg }}</div>
+        <form action="/account" method="post" class="form" id="form1">
+            {% from 'forms.twig' import input as input_field %}
+            {{ input_field("firstname", user.firstname, "text", "First name") }}
+            {{ input_field("lastname", user.lastname, "text", "Last name") }}
+            {{ input_field("username", user.username, "text", "Username") }}
+            {{ input_field("email", user.email, "text", "Email") }}
+            {{ input_field("city", location.cityName, "text", "City") }}
+            <select name="country" id="select">
+                <option value="">Choose country</option>
+                {% for country in countries %}
+                    {% if location.country_id == country.id %}
+                        {% set selected = 'selected' %}
+                    {% else %}
+                        {% set selected = '' %}
+                    {% endif %}
+                    <option value="{{ country.id }}" {{ selected }}>{{ country.name }}</option>
+                {% endfor %}
+            </select>
+            <div class="submit">
+                <input type="submit" value="SAVE" class="button-blue"/>
+                <div class="ease"></div>
+            </div>
+        </form>
+    </div>
+{% endblock %}
+

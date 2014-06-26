@@ -2,16 +2,24 @@
 
 {% block content %}
     <div class="block">
-        <h1>Our subscribers</h1>
+        <h1>Guest's Messages</h1>
+        {% if messages %}
         <ul>
-        {% for user in users %}
-            <li>{{ user.name }} {{ user.email }}</li>
+        {% for message in messages %}
+            <li>
+                {{ message.created }}
+            </li>
+            <li>
+                <span class="author"> {{ message.firstname }} {{ message.lastname }}: </span>
+                {{ message.text }}
+            </li>
         {% endfor %}
         </ul>
         {% include "paginator.twig" %}
+        {% else %}
+            <br/>
+            No messages yet. <a href="/post">Write one!</a>
+        {% endif %}
     </div>
-
-    {% include "form.twig" %}
-
 {% endblock %}
 

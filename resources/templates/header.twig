@@ -3,17 +3,20 @@
         <div class="ct-nav-wrapper">
             <nav class="ct-nav-main">
                 <ul>
-                    <li><a href="/">Section 1</a></li>
-                    <li><a href="/">Section 2</a></li>
-                    <li><a href="/">Section 3</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/post">Feedback</a></li>
                 </ul>
             </nav>
         </div>
 
         <div class="ct-header-items-right">
             <ul class="ct-options">
-                <li><a href="/"><span>Option 1</span></a></li>
-                <li><a href="/"><span>Option 2</span></a></li>
+                {% if user %}
+                    <li><a href="/account"><span>{{ user.firstname }}: My Account</span></a></li>
+                    <li><a href="/logout"><span>Logout</span></a></li>
+                {% else %}
+                    <li><a href="/login"><span>Login</span></a></li>
+                {% endif %}
             </ul>
         </div>
     </div>

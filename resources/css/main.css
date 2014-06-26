@@ -23,12 +23,54 @@ a:hover, a:visited {
     color: #0493bd;
 }
 
+
+textarea {
+    width: 100%;
+    height: 150px;
+    line-height: 150%;
+    resize:vertical;
+}
+
+input:hover, textarea:hover,
+input:focus, textarea:focus
+select:focus, select:hover {
+    background-color:white;
+}
+
+select {
+    color:#aaa;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight:500;
+    font-size: 1em;
+    border-radius: 0;
+    line-height: 1.2em;
+    padding: 1em;
+    margin-bottom: 10px;
+    width:100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 3px solid rgba(0,0,0,0);
+    -webkit-appearance: none;
+    background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50px' height='50px'><polyline points='46.139,15.518 25.166,36.49 4.193,15.519'/></svg>") right no-repeat;
+    background-color: #fbfbfb;
+    background-position: right 15px top 22px;
+    background-size: 18px 18px;
+}
+
+li {
+    margin: 10px;
+}
+
 div.wrapper {
     background-color: white;
     border-left: 1px dashed #333;
     border-right: 1px dashed #333;
+    border-bottom: 1px dashed #333;
     margin: 0 auto;
     width:60%;
+    height:400%;
 }
 
 /* Main menue */
@@ -71,7 +113,7 @@ div.wrapper {
 /* Top right menue  */
 .ct-header-items-right {
     float: right;
-    margin: 14px 0;
+    margin: 0;
 }
 
 .ct-inner {
@@ -95,14 +137,14 @@ div.wrapper {
 }
 
 div.content {
-    min-height:86%;
+    height:100%;
 }
 
 div.block {
     border: 1px dashed #333;
-    width: 50%;
+    width: 60%;
     padding:10px;
-    margin: 4px;
+    margin: 4px auto;
     -moz-border-radius: 7px;
     -webkit-border-radius: 7px;
 }
@@ -168,19 +210,6 @@ label {
     outline: 0;
 }
 
-textarea {
-    width: 100%;
-    height: 150px;
-    line-height: 150%;
-    resize:vertical;
-}
-
-input:hover, textarea:hover,
-input:focus, textarea:focus
-select:focus, select:hover {
-    background-color:white;
-}
-
 .button-blue{
     font-family: Arial, Helvetica, sans-serif;
     float:left;
@@ -228,24 +257,18 @@ select:focus, select:hover {
     background-color: #eee;
 }
 
-select {
-    color:#aaa;
-    font-family: Helvetica, Arial, sans-serif;
-    font-weight:500;
-    font-size: 1em;
-    border-radius: 0;
-    line-height: 1.2em;
-    padding: 1em;
-    margin-bottom: 10px;
-    width:100%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-    border: 3px solid rgba(0,0,0,0);
-    -webkit-appearance: none;
-    background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50px' height='50px'><polyline points='46.139,15.518 25.166,36.49 4.193,15.519'/></svg>") right no-repeat;
-    background-color: #fbfbfb;
-    background-position: right 15px top 22px;
-    background-size: 18px 18px;
+.error {
+    color:orangered;
+}
+
+.success {
+    color:green;
+}
+
+.status {
+    margin: 1em;
+}
+
+.author {
+    color: #3498db;
 }
